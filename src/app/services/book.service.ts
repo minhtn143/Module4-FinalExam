@@ -1,4 +1,4 @@
-import { Book } from './../interface/book';
+import { Book } from 'src/app/interface/book';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
@@ -16,5 +16,11 @@ export class BookService {
 
   getBookById(id: number): Observable<Book> {
     return this.http.get<Book>(`${this.API_URL}/${id}`);
+  }
+
+  deleteBook(id) {}
+
+  createBook(book: Partial<Book>): Observable<Book> {
+    return this.http.post<Book>(this.API_URL, book);
   }
 }

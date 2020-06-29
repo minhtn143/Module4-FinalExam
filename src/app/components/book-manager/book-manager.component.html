@@ -1,7 +1,7 @@
 <div class="col-md-8">
   <div class="row">
     <div>There are .... books</div>
-    <div class="btn btn-primary">Add new Book</div>
+    <div class="btn btn-primary" [routerLink]="'/books/create'">Add new Book</div>
   </div>
 
   <div class="col">
@@ -25,7 +25,7 @@
           <td>{{book.author}}</td>
           <td>
             <a [routerLink]="['/books', book.id, 'edit']">Edit</a> |
-            <a>Delete</a>
+            <a [routerLink]="['/books', book.id, 'delete']">Delete</a>
           </td>
         </tr>
       </tbody>

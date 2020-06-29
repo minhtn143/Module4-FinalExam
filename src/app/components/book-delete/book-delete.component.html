@@ -1,1 +1,31 @@
-<p>book-delete works!</p>
+<div class="row">
+  <div class="col-md-10">
+    <h3>DELETE BOOK</h3>
+  </div>
+
+</div>
+
+<div *ngIf="book; else nothing">
+  <h4>
+      Title: {{book.title}}
+  </h4>
+  <p>
+      Author: {{book.author}}
+  </p>
+  <p> Description:</p>
+  <div class="div">
+    {{book.description}}
+  </div>
+  <div class="col-md-6">
+    <div class="row">
+      <button (click) = "deleteBook()">DELETE</button>
+    </div>
+
+  </div>
+
+
+</div>
+
+<ng-template #nothing>
+  <p>Nothing to show</p>
+</ng-template>

@@ -1,4 +1,4 @@
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -16,7 +16,6 @@ import { BookManagerComponent } from './components/book-manager/book-manager.com
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClient,
     ReactiveFormsModule,
 
   ],

@@ -18,7 +18,7 @@
         <tr *ngFor="let book of bookList; index as i">
           <th scope="row">{{book.id}}</th>
           <td>
-            <a [routerLink]="['books', book.id]">
+            <a [routerLink]="['/books', book.id]">
               {{book.title}}
             </a>
           </td>

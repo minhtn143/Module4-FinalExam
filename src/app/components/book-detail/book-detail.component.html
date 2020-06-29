@@ -1,1 +1,27 @@
-<p>book-detail works!</p>
+<div class="row">
+  <div class="col-md-10">
+    <h3>BOOK DETAILS</h3>
+  </div>
+  <div class="col-md-2">
+    <a [routerLink]="'/books'">Book List</a>
+  </div>
+</div>
+
+<div *ngIf="book; else nothing">
+  <h4>
+      Title: {{book.title}}
+  </h4>
+  <p>
+      Author: {{book.author}}
+  </p>
+  <p> Description:</p>
+  <div class="div">
+    {{book.description}}
+  </div>
+
+
+</div>
+
+<ng-template #nothing>
+  <p>Nothing to show</p>
+</ng-template>
